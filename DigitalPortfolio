@@ -1,0 +1,145 @@
+<!-- FILE: index.html --><!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karthik Sound — Digital Portfolio</title>
+  <meta name="description" content="Portfolio of Karthik Sound — web developer, designer, projects and contact." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional: change the font by editing the font-family in CSS -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Karthik <span>Sound</span></h1>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </header>  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-left">
+          <h2>Hi, I’m <strong>Karthik</strong></h2>
+          <p>Front-end developer building accessible, responsive websites. I care about performance, clean code and delightful UX.</p>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+        <div class="hero-right">
+          <div class="avatar">KS</div>
+        </div>
+      </div>
+    </section><section id="about" class="about container">
+  <h3>About Me</h3>
+  <p>I build modern websites with HTML, CSS and JavaScript. Currently learning advanced front-end frameworks and best practices for accessibility and performance.</p>
+  <ul class="meta">
+    <li><strong>Location:</strong> India</li>
+    <li><strong>Role:</strong> Front-end Developer</li>
+    <li><strong>Availability:</strong> Open to opportunities</li>
+  </ul>
+</section>
+
+<section id="projects" class="projects container">
+  <h3>Projects</h3>
+  <div class="grid">
+    <article class="card">
+      <div class="card-media" aria-hidden="true">Image</div>
+      <div class="card-body">
+        <h4>Project One</h4>
+        <p>Short description of the project. Tech: HTML • CSS • JS</p>
+        <p class="card-links"><a href="#">Live</a> · <a href="#">Code</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media" aria-hidden="true">Image</div>
+      <div class="card-body">
+        <h4>Project Two</h4>
+        <p>Short description of the project. Tech: React • Node</p>
+        <p class="card-links"><a href="#">Live</a> · <a href="#">Code</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media" aria-hidden="true">Image</div>
+      <div class="card-body">
+        <h4>Project Three</h4>
+        <p>Short description of the project. Tech: CSS Animations</p>
+        <p class="card-links"><a href="#">Live</a> · <a href="#">Code</a></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="skills container">
+  <h3>Skills</h3>
+  <ul class="skills-list">
+    <li>HTML5</li>
+    <li>CSS3 / Flexbox / Grid</li>
+    <li>JavaScript (ES6+)</li>
+    <li>Responsive Design</li>
+    <li>Version Control (Git & GitHub)</li>
+  </ul>
+</section>
+
+<section id="contact" class="contact container">
+  <h3>Contact</h3>
+  <p>If you'd like to work together, email me at <a href="mailto:yourname@example.com">yourname@example.com</a> or connect on <a href="#">LinkedIn</a>.</p>
+
+  <form class="contact-form" action="#" onsubmit="alert('This is a demo form — replace action with your form endpoint'); return false;">
+    <label>
+      Name
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Message
+      <textarea name="message" rows="4" required></textarea>
+    </label>
+    <button class="btn" type="submit">Send</button>
+  </form>
+</section>
+
+  </main>  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Karthik Sound. Built with ❤️.</p>
+    </div>
+  </footer>  <script>
+    // Small script for year and simple nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', ()=>{
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  </script></body>
+</html>/* FILE: styles.css / / Copy this into styles.css file */ :root{ --bg: #0f1724; --card: #0b1220; --muted: #9aa4b2; --accent: #6ee7b7; --glass: rgba(255,255,255,0.03); --radius: 12px; --container: 1100px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; } *{box-sizing:border-box} html,body{height:100%} body{ margin:0; background:linear-gradient(180deg,var(--bg), #071025); color: #e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.5; } .container{max-width:var(--container);margin:0 auto;padding:2rem} .site-header{background:transparent;position:sticky;top:0;z-index:50;padding:0.5rem 0} .header-inner{display:flex;align-items:center;justify-content:space-between} .logo{margin:0;font-size:1.25rem} .logo span{color:var(--accent)} .main-nav{display:flex;gap:1rem} .main-nav a{color:var(--muted);text-decoration:none} .nav-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:1.25rem}
+
+.hero{padding:4rem 0} .hero .container{display:flex;gap:2rem;align-items:center} .hero-left{flex:1} .hero-right{width:160px;display:flex;justify-content:center} .avatar{width:140px;height:140px;border-radius:18px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:2rem;color:var(--accent)} .btn{display:inline-block;margin-top:1rem;padding:0.6rem 1rem;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.08);text-decoration:none}
+
+.about p{max-width:60ch;color:var(--muted)} .meta{list-style:none;padding:0;display:flex;gap:1.5rem;margin-top:1rem;color:var(--muted)}
+
+.projects .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem} .card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)} .card-media{height:120px;border-radius:8px;background:linear-gradient(135deg,#07223b,#0f3a5a);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem} .card h4{margin:0 0 0.25rem} .card p{margin:0;color:var(--muted)} .card-links a{color:var(--accent);text-decoration:none}
+
+.skills-list{display:flex;flex-wrap:wrap;gap:0.75rem;list-style:none;padding:0} .skills-list li{background:var(--glass);padding:0.5rem 0.75rem;border-radius:8px;color:var(--muted)}
+
+.contact-form{display:grid;gap:0.5rem;max-width:600px} .contact-form label{display:block} .contact-form input,.contact-form textarea{width:100%;padding:0.5rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+
+.site-footer{padding:2rem 0;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted)}
+
+/* Responsive */ @media (max-width:900px){ .projects .grid{grid-template-columns:repeat(2,1fr)} .hero .container{flex-direction:column;align-items:flex-start} } @media (max-width:640px){ .main-nav{display:none} .nav-toggle{display:block} .main-nav.open{display:flex;position:absolute;right:1rem;top:64px;background:var(--card);padding:0.75rem;border-radius:8px;flex-direction:column} .projects .grid{grid-template-columns:1fr} }
+
+/* Small utilities */ .text-muted{color:var(--muted)}
+
+/* End of styles.css */
+
+<!-- README: How to upload to GitHub --><!-- Create two files in your local folder: index.html and styles.css (copy the sections above into each). --><!-- Quick Git commands to upload to GitHub --><!-- 1. git init --><!-- 2. git add . --><!-- 3. git commit -m "Initial portfolio" --><!-- 4. create a new repo on GitHub (do not initialize with README) --><!-- 5. git remote add origin https://github.com/<your-username>/<repo-name>.git --><!-- 6. git branch -M main --><!-- 7. git push -u origin main --><!-- Replace email, links and project details with your real info. -->
