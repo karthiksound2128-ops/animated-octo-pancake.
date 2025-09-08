@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+    #about {
+      background: #fff;
+    }
+    #projects {
+      background: #e9ecef;
+    }
+    .project-card {
+      background: #fff;
+      display: inline-block;
+      width: 250px;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .project-card a:hover {
+      background: #ff9800;
+    }
+    #contact {
+      background: #fff;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #ff9800;
+    }
+    footer {
+      text-align: center;
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <h2>I am Aakash.G</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am Aakash, I'm learning web development. This is my first portfolio project using HTML and CSS only.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>A simple HTML & CSS website.</p>
+      <a href="simple-website.html" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Project 2</h3>
+      <p>Responsive landing page layout.</p>
+      <a href="landing-page.html" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Project 3</h3>
+      <p>Styled contact form with CSS.</p>
+      <a href="contact-form.html" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio | Made with HTML & CSS</p>
+  </footer>
+</body>
+  </html>
